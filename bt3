@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main(){
+	
+	int n;
+		
+	printf(" Hay nhap so nguyen n vao day : ");
+	scanf("%d", &n );
+	
+    if( n < 0 ){
+    	printf("Thong bao loi vui long nhap lai so nguyen "); 
+	}
+	
+	int original = n;
+	int reversed = 0;
+	
+	while( n > 0 ){
+		reversed = reversed * 10 + n % 10;
+		n /= 10; 
+	} 
+	
+	if( original == reversed ){
+		printf(" %d la so doi xung " , original ); 
+	} else{
+		printf("%d khong phai la so doi xung " , original ); 
+	} 
+	
+	return 0; 
+}
