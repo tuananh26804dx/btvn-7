@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <math.h> 
+
+int main(){
+	
+	int n, original, i = 0, remainder, result = 0; 
+	
+	printf("Hay nhap 1 so nguyen vao day: ");
+	scanf("%d", &n);
+	
+	original = n;  
+	
+	int temp = n; 
+	
+
+	while(temp != 0){
+	 	i++;
+	 	temp /= 10;
+	}
+
+	temp = n;
+
+	while(temp != 0) {
+		remainder = temp % 10;
+		result += pow(remainder, i);
+		temp /= 10;
+	}  
+	
+	
+	if(result == original){
+		printf("%d la so Armstrong \n", original); 
+	} else {
+		printf("%d khong phai so Armstrong\n", original); 
+	} 
+	
+	return 0; 
+}
