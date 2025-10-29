@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+
+int main(){
+	
+	
+	int n;  //so  nguyen  
+	int i = 1; 
+	
+	printf("Hay nhap so nguyen n vao day :  ");
+	scanf("%d", &n);
+	
+	int so_chan = 0 ;
+	int so_le = 0;
+	
+	if( n < 0 ){
+		printf("Thong bao loi xin vui long nhap lai so nguyen "); 
+	} 
+	
+	for( i ; i <= n ; i++){
+	    if ( i % 2 == 0 ){
+	    	so_chan++; 
+		} else {
+			so_le++;
+		} 
+	}
+	printf("So luong chu so chan : %d\n", so_chan ); 
+	printf("So luong chu so le : %d \n ", so_le);
+return 0; 
+} 
